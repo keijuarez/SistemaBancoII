@@ -15,7 +15,7 @@ namespace CapaDatos
 
         public DataTable MtMostrarClientes()
         {
-            string QryMostrarClientes = "select * from tbl_clientes";//CORRECTO ES ARMAR UN STORED PROCEDURES
+            string QryMostrarClientes = "exec usp_clientes_mostrar;";
             SqlDataAdapter adapter = new SqlDataAdapter(QryMostrarClientes,db_conexion.MtdAbrirConexion());
             DataTable dtMostrarClientes = new DataTable();
             adapter.Fill(dtMostrarClientes);
