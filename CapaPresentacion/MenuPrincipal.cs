@@ -59,5 +59,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnCuentas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
