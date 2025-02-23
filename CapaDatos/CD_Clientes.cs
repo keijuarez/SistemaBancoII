@@ -5,9 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaDatos
 {
+    //Metodo Mostrar Clientes
     public class CD_Clientes
     {
     
@@ -23,22 +25,22 @@ namespace CapaDatos
             return dtMostrarClientes;
         }
 
-        // Capa datos
+        // Metodo Agregar clientes
         public void MtdAgregarClientes( string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
         {
-           // Abrir la conexión
+        
              db_conexion.MtdAbrirConexion();
 
-            // Definir el procedimiento almacenado
+            
             string Usp_crear = "usp_clientes_crear";
 
-            // Crear el comando para ejecutar el procedimiento almacenado
+    
             SqlCommand cmd_InsertarClientes = new SqlCommand(Usp_crear, db_conexion.MtdAbrirConexion());
 
-            // Especificar que el comando es de tipo Procedimiento Almacenado
+
             cmd_InsertarClientes.CommandType = CommandType.StoredProcedure;
 
-            // Añadir los parámetros para el procedimiento almacenado
+
             cmd_InsertarClientes.Parameters.AddWithValue("@Nombre", Nombre);
             cmd_InsertarClientes.Parameters.AddWithValue("@Direccion", Direccion);
             cmd_InsertarClientes.Parameters.AddWithValue("@Departamento", Departamento);
@@ -46,8 +48,31 @@ namespace CapaDatos
             cmd_InsertarClientes.Parameters.AddWithValue("@Categoria", Categoria);
             cmd_InsertarClientes.Parameters.AddWithValue("@Estado", Estado);
 
-            // Ejecutar el procedimiento almacenado
+
             cmd_InsertarClientes.ExecuteNonQuery();
+
+        }
+
+       //Metodo actualizar clientes
+        public int MtdActualizarClientes(int Codigo, string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
+        {
+            int vContarRegistrosAfectados = 0;
+
+            db_conexion.MtdAbrirConexion();
+            string vUspEditarClientes = "usp_clientes_editar2";
+            SqlCommand commEditarClientes = new SqlCommand(vUspEditarClientes, db_conexion.MtdAbrirConexion());
+            commEditarClientes.CommandType = CommandType.StoredProcedure;
+
+            commEditarClientes.Parameters.AddWithValue("@Codigo", Codigo);
+            commEditarClientes.Parameters.AddWithValue("@Nombre", Nombre);
+            commEditarClientes.Parameters.AddWithValue("@Direccion", Direccion);
+            commEditarClientes.Parameters.AddWithValue("@Departamento", Departamento);
+            commEditarClientes.Parameters.AddWithValue("@Pais", Pais);
+            commEditarClientes.Parameters.AddWithValue("@Categoria", Categoria);
+            commEditarClientes.Parameters.AddWithValue("@Estado", Estado);
+
+            vContarRegistrosAfectados = commEditarClientes.ExecuteNonQuery();
+            return vContarRegistrosAfectados;
 
         }
     }

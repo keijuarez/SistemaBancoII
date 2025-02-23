@@ -74,9 +74,9 @@
             this.gboxClientes.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.gboxClientes.Location = new System.Drawing.Point(4, 10);
-            this.gboxClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxClientes.Margin = new System.Windows.Forms.Padding(2);
             this.gboxClientes.Name = "gboxClientes";
-            this.gboxClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxClientes.Padding = new System.Windows.Forms.Padding(2);
             this.gboxClientes.Size = new System.Drawing.Size(866, 204);
             this.gboxClientes.TabIndex = 0;
             this.gboxClientes.TabStop = false;
@@ -89,8 +89,8 @@
             this.cboxCategoria.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxCategoria.Location = new System.Drawing.Point(469, 103);
-            this.cboxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxCategoria.Location = new System.Drawing.Point(449, 103);
+            this.cboxCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cboxCategoria.Name = "cboxCategoria";
             this.cboxCategoria.Size = new System.Drawing.Size(148, 28);
             this.cboxCategoria.TabIndex = 19;
@@ -102,10 +102,10 @@
             this.btnGuardar.IconColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 35;
-            this.btnGuardar.Location = new System.Drawing.Point(761, 124);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(746, 124);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(97, 32);
+            this.btnGuardar.Size = new System.Drawing.Size(112, 32);
             this.btnGuardar.TabIndex = 18;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -119,14 +119,15 @@
             this.btnActualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 35;
-            this.btnActualizar.Location = new System.Drawing.Point(761, 83);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(746, 83);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(97, 32);
+            this.btnActualizar.Size = new System.Drawing.Size(112, 32);
             this.btnActualizar.TabIndex = 17;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -135,10 +136,10 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Red;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 35;
-            this.btnCancelar.Location = new System.Drawing.Point(761, 41);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(746, 41);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(97, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(112, 32);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Eliminar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -151,8 +152,8 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(469, 137);
-            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxEstado.Location = new System.Drawing.Point(449, 137);
+            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(148, 28);
             this.cboxEstado.TabIndex = 15;
@@ -182,8 +183,8 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(469, 70);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Location = new System.Drawing.Point(449, 70);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(273, 24);
             this.txtDireccion.TabIndex = 11;
@@ -203,7 +204,7 @@
             // 
             this.txtDepartamento.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDepartamento.Location = new System.Drawing.Point(123, 132);
-            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(2);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(148, 24);
             this.txtDepartamento.TabIndex = 7;
@@ -218,13 +219,12 @@
             this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Departamento:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.Location = new System.Drawing.Point(123, 102);
-            this.txtPais.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPais.Margin = new System.Windows.Forms.Padding(2);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(148, 24);
             this.txtPais.TabIndex = 5;
@@ -244,7 +244,7 @@
             // 
             this.txtNombres.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.Location = new System.Drawing.Point(123, 72);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(234, 24);
             this.txtNombres.TabIndex = 3;
@@ -264,7 +264,7 @@
             // 
             this.txtCodigoCliente.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoCliente.Location = new System.Drawing.Point(123, 38);
-            this.txtCodigoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(148, 24);
             this.txtCodigoCliente.TabIndex = 1;
@@ -287,12 +287,15 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.GridColor = System.Drawing.Color.DarkGray;
             this.dgvClientes.Location = new System.Drawing.Point(4, 221);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(866, 266);
             this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // btnEliminar
             // 
@@ -303,7 +306,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 35;
             this.btnEliminar.Location = new System.Drawing.Point(765, 496);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 32);
             this.btnEliminar.TabIndex = 19;
@@ -321,7 +324,7 @@
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.gboxClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
