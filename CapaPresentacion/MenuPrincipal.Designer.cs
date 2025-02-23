@@ -318,7 +318,7 @@
             this.btnInicio.TabIndex = 12;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+
             // 
             // btnOcultarMenu
             // 
@@ -376,7 +376,6 @@
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
-            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenuInferior.ResumeLayout(false);
             this.PanelSuperior.ResumeLayout(false);

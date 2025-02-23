@@ -12,9 +12,9 @@ using CapaDatos;
 
 namespace CapaPresentacion
 {
-    public partial class FrmClientes : Form
+    public partial class FrmCuentas : Form
     {
-        public FrmClientes()
+        public FrmCuentas()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace CapaPresentacion
             dgvClientes.Refresh();
         }
 
-        private void FrmClientes_Load(object sender, EventArgs e)
+        private void FrmCuentas_Load(object sender, EventArgs e)
         {
             MtdMostrarClientes();
         }
@@ -40,7 +40,7 @@ namespace CapaPresentacion
 
             try
             {
-                cD_Clientes.MtdAgregarClientes(txtNombres.Text, txtDireccion.Text, txtDepartamento.Text, txtPais.Text, cboxCategoria.Text, cboxEstado.Text);
+                cD_Clientes.MtdAgregarClientes(txtCodigoCliente.Text, txtFecha.Text, txtSaldo.Text, txtNumeroCuenta.Text, cboxTipoCuenta.Text, cboxEstado.Text);
 
                 MessageBox.Show("El cliente se agregó con éxito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdMostrarClientes();
@@ -53,12 +53,12 @@ namespace CapaPresentacion
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                txtCodigoCliente.Text = dgvClientes.SelectedCells[0].Value.ToString();
-                txtNombres.Text = dgvClientes.SelectedCells[1].Value.ToString();
-                txtPais.Text = dgvClientes.SelectedCells[4].Value.ToString();
-                txtDepartamento.Text = dgvClientes.SelectedCells[3].Value.ToString();
-                txtDireccion.Text = dgvClientes.SelectedCells[2].Value.ToString();
-                cboxCategoria.Text = dgvClientes.SelectedCells[5].Value.ToString();
+                txtCodigoCuenta.Text = dgvClientes.SelectedCells[0].Value.ToString();
+                txtCodigoCliente.Text = dgvClientes.SelectedCells[1].Value.ToString();
+                txtNumeroCuenta.Text = dgvClientes.SelectedCells[4].Value.ToString();
+                txtSaldo.Text = dgvClientes.SelectedCells[3].Value.ToString();
+                txtFecha.Text = dgvClientes.SelectedCells[2].Value.ToString();
+                cboxTipoCuenta.Text = dgvClientes.SelectedCells[5].Value.ToString();
                 cboxEstado.Text = dgvClientes.SelectedCells[6].Value.ToString();
         }
 
@@ -68,12 +68,12 @@ namespace CapaPresentacion
             {
                 CD_Clientes cD_Clientes = new CD_Clientes();
 
-                int Codigo = Convert.ToInt32(txtCodigoCliente.Text);
-                string Nombre = txtNombres.Text;
-                string Pais = txtPais.Text;
-                string Departamento = txtDepartamento.Text;
-                string Direccion = txtDireccion.Text;
-                string Categoria = cboxCategoria.Text;
+                int Codigo = Convert.ToInt32(txtCodigoCuenta.Text);
+                string Nombre = txtCodigoCliente.Text;
+                string Pais = txtNumeroCuenta.Text;
+                string Departamento = txtSaldo.Text;
+                string Direccion = txtFecha.Text;
+                string Categoria = cboxTipoCuenta.Text;
                 string Estado = cboxEstado.Text;
 
                 int vCantidadRegistros = cD_Clientes.MtdActualizarClientes(Codigo, Nombre, Pais, Departamento, Direccion, Categoria, Estado);
@@ -103,7 +103,7 @@ namespace CapaPresentacion
             {
                 CD_Clientes cD_Clientes = new CD_Clientes();
 
-                int Codigo = Convert.ToInt32(txtCodigoCliente.Text);
+                int Codigo = Convert.ToInt32(txtCodigoCuenta.Text);
 
                 int vCantidadRegistros = cD_Clientes.MtdEliminarClientes(Codigo);
 
@@ -131,7 +131,7 @@ namespace CapaPresentacion
             {
                 CD_Clientes cD_Clientes = new CD_Clientes();
 
-                int Codigo = Convert.ToInt32(txtCodigoCliente.Text);
+                int Codigo = Convert.ToInt32(txtCodigoCuenta.Text);
 
                 int vCantidadRegistros = cD_Clientes.MtdEliminarClientes(Codigo);
 
@@ -151,5 +151,6 @@ namespace CapaPresentacion
                 MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
