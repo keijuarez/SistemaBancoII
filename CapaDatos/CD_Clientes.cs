@@ -12,7 +12,7 @@ namespace CapaDatos
     //Metodo Mostrar Clientes
     public class CD_Clientes
     {
-    
+
         CD_Conexion db_conexion = new CD_Conexion();
 
         public DataTable MtMostrarClientes()
@@ -26,15 +26,15 @@ namespace CapaDatos
         }
 
         // Metodo Agregar clientes
-        public void MtdAgregarClientes( string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
+        public void MtdAgregarClientes(string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
         {
-        
-             db_conexion.MtdAbrirConexion();
 
-            
+            db_conexion.MtdAbrirConexion();
+
+
             string Usp_crear = "usp_clientes_crear";
 
-    
+
             SqlCommand cmd_InsertarClientes = new SqlCommand(Usp_crear, db_conexion.MtdAbrirConexion());
 
 
@@ -53,7 +53,7 @@ namespace CapaDatos
 
         }
 
-       //Metodo actualizar clientes
+        //Metodo actualizar clientes
         public int MtdActualizarClientes(int Codigo, string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
         {
             int vContarRegistrosAfectados = 0;
@@ -73,7 +73,37 @@ namespace CapaDatos
 
             vContarRegistrosAfectados = commEditarClientes.ExecuteNonQuery();
             return vContarRegistrosAfectados;
+        }
 
+        //Metodo eliminar
+        public int MtdEliminarClientes(int Codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
+            try
+            {
+                db_conexion.MtdAbrirConexion();
+                string vUspEliminarClientes = "usp_clientes_eliminar2";
+                SqlCommand commEliminarClientes = new SqlCommand(vUspEliminarClientes, db_conexion.MtdAbrirConexion());
+                commEliminarClientes.CommandType = CommandType.StoredProcedure;
+
+                commEliminarClientes.Parameters.AddWithValue("@Codigo", Codigo);
+
+                object resultado = commEliminarClientes.ExecuteScalar();
+
+                if (resultado != null && int.TryParse(resultado.ToString(), out int cantidad))
+                {
+                    vCantidadRegistrosEliminados = cantidad;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db_conexion.MtdCerrarConexion();
+            }
+            return vCantidadRegistrosEliminados;
         }
     }
 }

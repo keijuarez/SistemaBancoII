@@ -43,6 +43,7 @@ namespace CapaPresentacion
                 cD_Clientes.MtdAgregarClientes(txtNombres.Text, txtDireccion.Text, txtDepartamento.Text, txtPais.Text, cboxCategoria.Text, cboxEstado.Text);
 
                 MessageBox.Show("El cliente se agregó con éxito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdMostrarClientes();
             }
             catch (Exception ex)
             {
@@ -92,6 +93,36 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CD_Clientes cD_Clientes = new CD_Clientes();
+
+                int Codigo = Convert.ToInt32(txtCodigoCliente.Text);
+
+                int vCantidadRegistros = cD_Clientes.MtdEliminarClientes(Codigo);
+
+                if (vCantidadRegistros > 0)
+                {
+                    MessageBox.Show("Registros Eliminado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MtdMostrarClientes();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró codigo!!", "Error eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
