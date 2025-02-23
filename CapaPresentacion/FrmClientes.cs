@@ -151,5 +151,10 @@ namespace CapaPresentacion
                 MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void gboxClientes_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

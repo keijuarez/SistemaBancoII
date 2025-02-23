@@ -46,10 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigoCuenta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.gboxClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxClientes
@@ -127,7 +127,6 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -144,7 +143,6 @@
             this.btnCancelar.Text = "Eliminar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cboxEstado
             // 
@@ -281,22 +279,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo cuenta:";
             // 
-            // dgvClientes
+            // dgvCuentas
             // 
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.GridColor = System.Drawing.Color.DarkGray;
-            this.dgvClientes.Location = new System.Drawing.Point(4, 221);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.RowHeadersWidth = 51;
-            this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(866, 266);
-            this.dgvClientes.TabIndex = 1;
-            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            this.dgvCuentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCuentas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuentas.GridColor = System.Drawing.Color.DarkGray;
+            this.dgvCuentas.Location = new System.Drawing.Point(4, 221);
+            this.dgvCuentas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCuentas.Name = "dgvCuentas";
+            this.dgvCuentas.ReadOnly = true;
+            this.dgvCuentas.RowHeadersWidth = 51;
+            this.dgvCuentas.RowTemplate.Height = 24;
+            this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCuentas.Size = new System.Drawing.Size(866, 266);
+            this.dgvCuentas.TabIndex = 1;
             // 
             // btnEliminar
             // 
@@ -314,7 +311,6 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // FrmCuentas
             // 
@@ -323,7 +319,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(878, 538);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.gboxClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -332,7 +328,7 @@
             this.Load += new System.EventHandler(this.FrmCuentas_Load);
             this.gboxClientes.ResumeLayout(false);
             this.gboxClientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,7 +336,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gboxClientes;
-        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.DataGridView dgvCuentas;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFecha;

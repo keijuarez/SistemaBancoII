@@ -81,6 +81,7 @@
             this.gboxClientes.TabIndex = 0;
             this.gboxClientes.TabStop = false;
             this.gboxClientes.Text = "DATOS CLIENTES";
+            this.gboxClientes.Enter += new System.EventHandler(this.gboxClientes_Enter);
             // 
             // cboxCategoria
             // 
