@@ -44,11 +44,11 @@ namespace CapaPresentacion
 
             try
             {
+                string Usuario = txtUsuario.Text;
                 string Clave = txtClave.Text;
-                string Usuario= txtUsuario.Text;
                 string estado = cboxEstado.Text;
 
-                cD_Usuarios.MtdAgregaUsuarios(Clave, Usuario, estado);
+                cD_Usuarios.MtdAgregaUsuarios(Usuario, Clave, estado);
 
                 MessageBox.Show("Usuario agregado con éxito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdMostrarUsuarios();
@@ -74,7 +74,7 @@ namespace CapaPresentacion
                 CD_Usuarios cD_Usuarios = new CD_Usuarios();
 
                 //cD_Clientes.MtdActualizarClientes(int.Parse(txtCodigoCliente.Text), txtNombres.Text, txtDireccion.Text, txtDepartamento.Text, txtPais.Text, cboxCategoria.Text, cboxEstado.Text);
-                int vCantidadRegistros = cD_Usuarios.MtdActualizarUsuarios(int.Parse(txtCorrelativo.Text), txtClave.Text, txtUsuario.Text, cboxEstado.Text);
+                int vCantidadRegistros = cD_Usuarios.MtdActualizarUsuarios(int.Parse(txtCorrelativo.Text), txtUsuario.Text, txtClave.Text, cboxEstado.Text);
                
                 if (vCantidadRegistros > 0)
                 {
