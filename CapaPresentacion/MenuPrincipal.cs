@@ -69,9 +69,22 @@ namespace CapaPresentacion
             }
         }
 
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
+            PanelSeleccion.Top = btnReportes.Top; // Ajustar la posición de altura
+            PanelSeleccion.Height = btnReportes.Height; // Ajustar el tamaño
+            PanelSeleccion.Visible = true; // hacer visible el boton
 
+            FrmUsusarios frmUs = new FrmUsusarios();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmUs.TopLevel = false;
+                frmUs.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmUs);
+                this.PanelContenedor.Tag = frmUs;
+                frmUs.Show();
+            }
         }
     }
 }
