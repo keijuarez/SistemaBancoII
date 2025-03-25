@@ -59,7 +59,7 @@ namespace CapaDatos
             int vContarRegistrosAfectados = 0;
 
             db_conexion.MtdAbrirConexion();
-            string vUspEditarClientes = "usp_clientes_editar2";
+            string vUspEditarClientes = "usp_clientes_modificar";
             SqlCommand commEditarClientes = new SqlCommand(vUspEditarClientes, db_conexion.MtdAbrirConexion());
             commEditarClientes.CommandType = CommandType.StoredProcedure;
 
@@ -82,7 +82,7 @@ namespace CapaDatos
             try
             {
                 db_conexion.MtdAbrirConexion();
-                string vUspEliminarClientes = "usp_clientes_eliminar2";
+                string vUspEliminarClientes = "usp_clientes_eliminar";
                 SqlCommand commEliminarClientes = new SqlCommand(vUspEliminarClientes, db_conexion.MtdAbrirConexion());
                 commEliminarClientes.CommandType = CommandType.StoredProcedure;
 
@@ -104,6 +104,32 @@ namespace CapaDatos
                 db_conexion.MtdCerrarConexion();
             }
             return vCantidadRegistrosEliminados;
+        }
+
+        public int ObtenerUltimoCodigoCuenta()
+        {
+            int ultimoCodigo = 0;
+
+            try
+            {
+                SqlCommand cmd_UltimoCodigo = new SqlCommand("SELECT TOP 1 CodigoCliente FROM tbl_clientes ORDER BY CodigoCliente DESC", db_conexion.MtdAbrirConexion());
+                SqlDataReader reader = cmd_UltimoCodigo.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    ultimoCodigo = Convert.ToInt32(reader["CodigoCliente"]);
+                }
+
+                reader.Close();
+                db_conexion.MtdCerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el último código de cliente: " + ex.Message);
+            }
+
+            return ultimoCodigo;
         }
     }
 }

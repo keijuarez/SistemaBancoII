@@ -28,7 +28,7 @@ namespace CapaDatos
         public void MtdAgregarCuentas(int CodigoClie, string NumCuenta, string TipoCuenta, decimal Saldo, DateTime Fecha, string Estado)
         {
             db_conexion.MtdAbrirConexion();
-            string Usp_crear = "usp_cuentas_agregar";
+            string Usp_crear = "usp_cuentas_crear";
 
             SqlCommand cmd_InsertarCuentas = new SqlCommand(Usp_crear, db_conexion.MtdAbrirConexion());
             cmd_InsertarCuentas.CommandType = CommandType.StoredProcedure;
@@ -43,7 +43,58 @@ namespace CapaDatos
             cmd_InsertarCuentas.ExecuteNonQuery();
         }
 
+        //Metodo actualizar cuentas
+        public int MtdActualizarCuentas(int CodigoCuenta, int CodigoCliente, string NumCuenta, string TipoCuenta, decimal Saldo, DateTime Fecha, string Estado)
+        {
+            int vContarRegistrosAfectados = 0;
 
+            db_conexion.MtdAbrirConexion();
+            string vUspEditarCuentas = "usp_cuentas_modificar";
+            SqlCommand commEditarCuentas = new SqlCommand(vUspEditarCuentas, db_conexion.MtdAbrirConexion());
+            commEditarCuentas.CommandType = CommandType.StoredProcedure;
+
+            commEditarCuentas.Parameters.AddWithValue("@CodigoCuenta", CodigoCuenta);
+            commEditarCuentas.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
+            commEditarCuentas.Parameters.AddWithValue("@NumeroCuenta", NumCuenta);
+            commEditarCuentas.Parameters.AddWithValue("@TipoCuenta", TipoCuenta);
+            commEditarCuentas.Parameters.AddWithValue("@Saldo", Saldo);
+            commEditarCuentas.Parameters.AddWithValue("@FechaApertura", Fecha);
+            commEditarCuentas.Parameters.AddWithValue("@Estado", Estado);
+
+            vContarRegistrosAfectados = commEditarCuentas.ExecuteNonQuery();
+            return vContarRegistrosAfectados;
+        }
+
+
+        public int MtdEliminarCuentas(int Codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
+            try
+            {
+                db_conexion.MtdAbrirConexion();
+                string vUspEliminarCuentas = "usp_cuentas_eliminar";
+                SqlCommand commEliminarCuentas = new SqlCommand(vUspEliminarCuentas, db_conexion.MtdAbrirConexion());
+                commEliminarCuentas.CommandType = CommandType.StoredProcedure;
+
+                commEliminarCuentas.Parameters.AddWithValue("@CodigoCuenta", Codigo);
+
+                object resultado = commEliminarCuentas.ExecuteScalar();
+
+                if (resultado != null && int.TryParse(resultado.ToString(), out int cantidad))
+                {
+                    vCantidadRegistrosEliminados = cantidad;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db_conexion.MtdCerrarConexion();
+            }
+            return vCantidadRegistrosEliminados;
+        }
         public int ObtenerUltimoCodigoCuenta()
         {
             int ultimoCodigo = 0;

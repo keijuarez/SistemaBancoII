@@ -68,5 +68,10 @@ namespace CapaPresentacion
                 frmCue.Show();
             }
         }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

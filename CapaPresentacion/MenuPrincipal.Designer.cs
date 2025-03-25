@@ -68,7 +68,7 @@
             this.PanelMenu.Controls.Add(this.PanelMenuSuperior);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(150, 576);
             this.PanelMenu.TabIndex = 0;
@@ -77,7 +77,7 @@
             // 
             this.PanelSeleccion.BackColor = System.Drawing.Color.White;
             this.PanelSeleccion.Location = new System.Drawing.Point(1, 107);
-            this.PanelSeleccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelSeleccion.Margin = new System.Windows.Forms.Padding(2);
             this.PanelSeleccion.Name = "PanelSeleccion";
             this.PanelSeleccion.Size = new System.Drawing.Size(4, 37);
             this.PanelSeleccion.TabIndex = 9;
@@ -94,7 +94,7 @@
             this.btnReportes.IconSize = 35;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.Location = new System.Drawing.Point(2, 375);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(146, 41);
             this.btnReportes.TabIndex = 8;
@@ -114,7 +114,7 @@
             this.btnVentas.IconSize = 35;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(2, 330);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(146, 41);
             this.btnVentas.TabIndex = 7;
@@ -134,7 +134,7 @@
             this.btnInventarios.IconSize = 35;
             this.btnInventarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventarios.Location = new System.Drawing.Point(2, 285);
-            this.btnInventarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventarios.Name = "btnInventarios";
             this.btnInventarios.Size = new System.Drawing.Size(146, 41);
             this.btnInventarios.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.btnProductos.IconSize = 35;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(2, 240);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(146, 41);
             this.btnProductos.TabIndex = 5;
@@ -174,7 +174,7 @@
             this.btnCategorias.IconSize = 35;
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategorias.Location = new System.Drawing.Point(2, 196);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(146, 41);
             this.btnCategorias.TabIndex = 4;
@@ -194,7 +194,7 @@
             this.btnCuentas.IconSize = 35;
             this.btnCuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCuentas.Location = new System.Drawing.Point(2, 151);
-            this.btnCuentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCuentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnCuentas.Name = "btnCuentas";
             this.btnCuentas.Size = new System.Drawing.Size(146, 41);
             this.btnCuentas.TabIndex = 3;
@@ -214,8 +214,8 @@
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.IconSize = 35;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(2, 106);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClientes.Location = new System.Drawing.Point(3, 106);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(146, 41);
             this.btnClientes.TabIndex = 2;
@@ -230,7 +230,7 @@
             this.PanelMenuInferior.Controls.Add(this.btnConfiguracion);
             this.PanelMenuInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelMenuInferior.Location = new System.Drawing.Point(0, 483);
-            this.PanelMenuInferior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenuInferior.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenuInferior.Name = "PanelMenuInferior";
             this.PanelMenuInferior.Size = new System.Drawing.Size(148, 91);
             this.PanelMenuInferior.TabIndex = 1;
@@ -247,7 +247,7 @@
             this.btnConfiguracion.IconSize = 35;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfiguracion.Location = new System.Drawing.Point(1, 2);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(146, 88);
             this.btnConfiguracion.TabIndex = 9;
@@ -260,7 +260,7 @@
             this.PanelMenuSuperior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelMenuSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenuSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenuSuperior.Name = "PanelMenuSuperior";
             this.PanelMenuSuperior.Size = new System.Drawing.Size(148, 79);
             this.PanelMenuSuperior.TabIndex = 0;
@@ -274,7 +274,7 @@
             this.PanelSuperior.Controls.Add(this.btnOcultarMenu);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(150, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(893, 36);
             this.PanelSuperior.TabIndex = 1;
@@ -292,7 +292,7 @@
             this.btnUsuario.IconSize = 30;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuario.Location = new System.Drawing.Point(811, 0);
-            this.btnUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(39, 32);
             this.btnUsuario.TabIndex = 13;
@@ -312,13 +312,12 @@
             this.btnInicio.IconSize = 30;
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.Location = new System.Drawing.Point(850, 0);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(39, 32);
             this.btnInicio.TabIndex = 12;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
-
             // 
             // btnOcultarMenu
             // 
@@ -333,7 +332,7 @@
             this.btnOcultarMenu.IconSize = 30;
             this.btnOcultarMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOcultarMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnOcultarMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOcultarMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnOcultarMenu.Name = "btnOcultarMenu";
             this.btnOcultarMenu.Size = new System.Drawing.Size(39, 32);
             this.btnOcultarMenu.TabIndex = 11;
@@ -346,10 +345,11 @@
             this.PanelContenedor.Controls.Add(this.lblMensajeMenu);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(150, 36);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(893, 540);
             this.PanelContenedor.TabIndex = 3;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
             // lblMensajeMenu
             // 
@@ -372,7 +372,7 @@
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gboxClientes = new System.Windows.Forms.GroupBox();
             this.cboxCategoria = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
@@ -48,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.gboxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +75,7 @@
             this.gboxClientes.Controls.Add(this.label1);
             this.gboxClientes.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
-            this.gboxClientes.Location = new System.Drawing.Point(4, 10);
+            this.gboxClientes.Location = new System.Drawing.Point(4, 11);
             this.gboxClientes.Margin = new System.Windows.Forms.Padding(2);
             this.gboxClientes.Name = "gboxClientes";
             this.gboxClientes.Padding = new System.Windows.Forms.Padding(2);
@@ -81,7 +83,6 @@
             this.gboxClientes.TabIndex = 0;
             this.gboxClientes.TabStop = false;
             this.gboxClientes.Text = "DATOS CLIENTES";
-            this.gboxClientes.Enter += new System.EventHandler(this.gboxClientes_Enter);
             // 
             // cboxCategoria
             // 
@@ -90,7 +91,7 @@
             this.cboxCategoria.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxCategoria.Location = new System.Drawing.Point(449, 103);
+            this.cboxCategoria.Location = new System.Drawing.Point(459, 70);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cboxCategoria.Name = "cboxCategoria";
             this.cboxCategoria.Size = new System.Drawing.Size(148, 28);
@@ -142,7 +143,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(112, 32);
             this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.Text = "Eliminar";
+            this.btnCancelar.Text = "Limpiar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -154,7 +155,7 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(449, 137);
+            this.cboxEstado.Location = new System.Drawing.Point(459, 104);
             this.cboxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(148, 28);
@@ -164,7 +165,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(374, 137);
+            this.label8.Location = new System.Drawing.Point(384, 104);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
@@ -175,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(374, 107);
+            this.label7.Location = new System.Drawing.Point(384, 74);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
@@ -185,7 +186,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(449, 70);
+            this.txtDireccion.Location = new System.Drawing.Point(459, 37);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(273, 24);
@@ -195,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(374, 74);
+            this.label6.Location = new System.Drawing.Point(384, 41);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 16);
@@ -205,7 +206,7 @@
             // txtDepartamento
             // 
             this.txtDepartamento.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartamento.Location = new System.Drawing.Point(123, 132);
+            this.txtDepartamento.Location = new System.Drawing.Point(138, 132);
             this.txtDepartamento.Margin = new System.Windows.Forms.Padding(2);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(148, 24);
@@ -225,7 +226,7 @@
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(123, 102);
+            this.txtPais.Location = new System.Drawing.Point(138, 102);
             this.txtPais.Margin = new System.Windows.Forms.Padding(2);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(148, 24);
@@ -245,7 +246,7 @@
             // txtNombres
             // 
             this.txtNombres.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(123, 72);
+            this.txtNombres.Location = new System.Drawing.Point(138, 72);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(234, 24);
@@ -265,7 +266,7 @@
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoCliente.Location = new System.Drawing.Point(123, 38);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(138, 38);
             this.txtCodigoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(148, 24);
@@ -317,6 +318,11 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,5 +366,6 @@
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.ComboBox cboxCategoria;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
